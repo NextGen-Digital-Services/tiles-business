@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, ShoppingBag, ShieldCheck, UserCheck } from 'lucide-react';
+import { Menu, X, Phone, UserCheck } from 'lucide-react';
 import { getSettings } from '../utils/storage';
 import './Header.css';
 
@@ -23,14 +23,14 @@ export const Header = ({ onOpenQuote }) => {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Collections', path: '/collections' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Services', path: '/services' },
-    { name: 'Quality & Sourcing', path: '/quality' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'HOME', path: '/' },
+    { name: 'COLLECTIONS', path: '/collections' },
+    { name: 'PROJECTS', path: '/projects' },
+    { name: 'SERVICES', path: '/services' },
+    { name: 'QUALITY & SOURCING', path: '/quality' },
+    { name: 'ABOUT US', path: '/about' },
+    { name: 'TESTIMONIALS', path: '/testimonials' },
+    { name: 'CONTACT', path: '/contact' }
   ];
 
   return (
@@ -59,13 +59,13 @@ export const Header = ({ onOpenQuote }) => {
       {/* Main Header */}
       <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container header-inner">
-          {/* Brand Logo */}
+          {/* Brand Logo (Left Aligned) */}
           <Link to="/" className="brand-logo">
             <span className="brand-name">{settings.businessName || '[CLIENT_BUSINESS_NAME]'}</span>
             <span className="brand-subtext">TILES & MARBLE ATELIER</span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation (Visually Centered) */}
           <nav className="desktop-nav">
             {navLinks.map((link) => (
               <Link
@@ -78,9 +78,9 @@ export const Header = ({ onOpenQuote }) => {
             ))}
           </nav>
 
-          {/* Quick Actions */}
+          {/* Quick Actions / CTA Button (Right Aligned) */}
           <div className="header-actions">
-            <button className="btn btn-primary btn-sm" onClick={() => onOpenQuote()}>
+            <button className="btn btn-header-cta" onClick={() => onOpenQuote()}>
               Request Quote
             </button>
             

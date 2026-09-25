@@ -1,4 +1,4 @@
-/* Top Bar */
+/* Top Announcement Bar */
 .top-bar {
   background-color: var(--espresso);
   color: var(--travertine);
@@ -59,7 +59,7 @@
   color: rgba(255, 255, 255, 0.2);
 }
 
-/* Header */
+/* Main Site Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -70,77 +70,137 @@
 }
 
 .site-header.scrolled {
-  box-shadow: 0 4px 20px rgba(35, 31, 27, 0.06);
-  background-color: rgba(250, 247, 242, 0.96);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 25px rgba(35, 31, 27, 0.07);
+  background-color: rgba(250, 247, 242, 0.98);
+  backdrop-filter: blur(10px);
 }
 
+/* Header Container — Flexbox Only with Perfect Equal Visual Balance */
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--header-height);
+  height: 90px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+/* 14. Logo Section — Left Aligned & Balanced */
 .brand-logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-decoration: none;
+  flex: 1 0 0;
+  text-align: left;
 }
 
 .brand-name {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--espresso);
   letter-spacing: -0.01em;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-subtext {
   font-family: var(--font-sans);
   font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   color: var(--antique-gold);
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
+  white-space: nowrap;
 }
 
+/* 15. Desktop Navigation — Visually Centered & Single Line */
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 36px; /* Spacing between menu items (32px-48px) */
 }
 
+/* Nav Link Item — White Space Nowrap & Luxury Gold Accent Animation */
 .nav-item {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--charcoal);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.4rem 0;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 0;
   position: relative;
-  transition: color var(--transition-fast);
+  white-space: nowrap; /* Prevent menu items breaking into multiple lines */
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
 }
 
-.nav-item:hover, .nav-item.active {
+/* Luxury Gold Underline Accent Animation */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--antique-gold);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-item:hover,
+.nav-item.active {
   color: var(--antique-gold);
 }
 
+.nav-item:hover::after,
 .nav-item.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--antique-gold);
+  transform: translateX(-50%) scaleX(1);
 }
 
+/* 16. Header Actions & CTA Section — Right Aligned & Balanced */
 .header-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1 0 0;
   gap: 1rem;
+}
+
+/* 11. Improved Premium Luxury CTA Button */
+.btn-header-cta {
+  height: 52px; /* Height 50-54px */
+  padding: 0 32px; /* Horizontal padding 28-36px */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--antique-gold);
+  color: var(--white);
+  border: 1px solid var(--antique-gold);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(176, 141, 87, 0.15);
+}
+
+.btn-header-cta:hover {
+  background-color: var(--espresso);
+  border-color: var(--espresso);
+  color: var(--marble-white);
+  box-shadow: 0 4px 15px rgba(35, 31, 27, 0.2);
 }
 
 .mobile-toggle {
@@ -157,8 +217,8 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 320px;
-  max-width: 85vw;
+  width: 340px;
+  max-width: 88vw;
   height: 100vh;
   background-color: var(--marble-white);
   z-index: 1000;
@@ -196,13 +256,14 @@
 }
 
 .mobile-nav-item {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--espresso);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   padding: 0.9rem 0;
   border-bottom: 1px solid rgba(226, 217, 203, 0.4);
+  text-decoration: none;
 }
 
 .mobile-nav-item.active {
@@ -228,7 +289,17 @@
   z-index: 999;
 }
 
-@media (max-width: 1024px) {
+/* 12. Responsive Breakpoint — Ensures Desktop Nav Stays Single Clean Row Above 1200px */
+@media (max-width: 1280px) {
+  .desktop-nav {
+    gap: 24px;
+  }
+  .btn-header-cta {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 1180px) {
   .desktop-nav {
     display: none;
   }
@@ -237,5 +308,11 @@
   }
   .top-bar-left {
     display: none;
+  }
+  .brand-logo {
+    flex: initial;
+  }
+  .header-actions {
+    flex: initial;
   }
 }
