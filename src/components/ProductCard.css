@@ -1,0 +1,123 @@
+.product-card {
+  background-color: var(--white);
+  border: 1px solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--antique-gold);
+  box-shadow: 0 12px 30px rgba(35, 31, 27, 0.08);
+}
+
+.product-image-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 70%; /* 4:3 Aspect ratio */
+  overflow: hidden;
+  background-color: var(--travertine);
+}
+
+.product-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--transition-smooth);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--espresso);
+  color: var(--marble-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.6rem;
+}
+
+.product-tier {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: var(--antique-gold);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--espresso);
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+}
+
+.product-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--charcoal);
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.spec-icon {
+  color: var(--antique-gold);
+  flex-shrink: 0;
+}
+
+.product-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--espresso);
+  transition: color var(--transition-fast);
+}
+
+.btn-link:hover {
+  color: var(--antique-gold);
+}

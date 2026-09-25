@@ -1,0 +1,112 @@
+.services-hero {
+  padding: 4.5rem 0;
+}
+
+.service-blocks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.service-block {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--hairline);
+  padding: 3.5rem;
+}
+
+.service-block.reverse {
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--espresso);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.service-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--antique-gold);
+  margin-bottom: 1rem;
+}
+
+.service-desc {
+  font-size: 0.98rem;
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.service-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.service-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--espresso);
+  font-weight: 500;
+}
+
+.feat-icon {
+  color: var(--antique-gold);
+  flex-shrink: 0;
+}
+
+.service-card-visual {
+  background-color: var(--travertine);
+  border: 1px solid var(--border-light);
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.visual-icon-box {
+  width: 90px;
+  height: 90px;
+  background-color: var(--espresso);
+  color: var(--antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--antique-gold);
+}
+
+.visual-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--espresso);
+}
+
+@media (max-width: 900px) {
+  .service-block, .service-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}

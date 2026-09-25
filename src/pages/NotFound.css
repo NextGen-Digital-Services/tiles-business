@@ -1,0 +1,45 @@
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  background-color: var(--travertine);
+}
+
+.not-found-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--marble-white);
+  border: 1px solid var(--antique-gold);
+  padding: 4rem 2.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.not-found-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: var(--espresso);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.not-found-desc {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .not-found-actions {
+    flex-direction: column;
+  }
+}

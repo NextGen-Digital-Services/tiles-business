@@ -1,0 +1,123 @@
+.admin-sidebar {
+  width: 260px;
+  background-color: var(--espresso);
+  color: var(--marble-white);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  padding: 1.8rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon {
+  color: var(--antique-gold);
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--marble-white);
+  line-height: 1.1;
+}
+
+.brand-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--antique-gold);
+}
+
+.admin-nav-list {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #C5BCB9;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.admin-nav-link:hover {
+  color: var(--marble-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.admin-nav-link.active {
+  color: var(--antique-gold);
+  background-color: rgba(176, 141, 87, 0.12);
+  border-left-color: var(--antique-gold);
+}
+
+.sidebar-footer {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.btn-view-site {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem;
+  background-color: transparent;
+  border: 1px solid var(--antique-gold);
+  color: var(--antique-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-view-site:hover {
+  background-color: var(--antique-gold);
+  color: var(--white);
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #D6CFCE;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-logout:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}

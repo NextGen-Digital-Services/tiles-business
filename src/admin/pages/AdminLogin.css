@@ -1,0 +1,93 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--espresso);
+  padding: 1.5rem;
+}
+
+.login-card {
+  background-color: var(--marble-white);
+  border: 1px solid var(--antique-gold);
+  width: 100%;
+  max-width: 440px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-brand-icon {
+  color: var(--antique-gold);
+  margin-bottom: 0.8rem;
+}
+
+.login-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--espresso);
+  line-height: 1.2;
+}
+
+.login-sub {
+  font-size: 0.82rem;
+  color: var(--charcoal);
+  margin-top: 0.3rem;
+}
+
+.login-error-alert {
+  background-color: rgba(168, 92, 50, 0.15);
+  border: 1px solid var(--terracotta);
+  color: var(--terracotta);
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--antique-gold);
+}
+
+.login-input {
+  padding-left: 2.8rem !important;
+}
+
+.login-btn {
+  margin-top: 1rem;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.back-to-site-link {
+  color: var(--espresso);
+  font-weight: 600;
+}
+
+.back-to-site-link:hover {
+  color: var(--antique-gold);
+}
+
+.demo-credentials {
+  color: var(--antique-gold);
+  font-weight: 700;
+}

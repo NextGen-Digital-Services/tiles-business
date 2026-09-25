@@ -1,0 +1,78 @@
+.testimonial-card {
+  background-color: var(--marble-white);
+  border: 1px solid var(--hairline);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  border-color: var(--antique-gold);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.project-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--antique-gold);
+  border: 1px solid var(--border-light);
+  padding: 0.2rem 0.5rem;
+}
+
+.quote-mark {
+  color: var(--antique-gold);
+  opacity: 0.35;
+  margin-bottom: 0.6rem;
+}
+
+.testimonial-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--espresso);
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1rem;
+}
+
+.author-name {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--espresso);
+}
+
+.author-role {
+  font-size: 0.8rem;
+  color: var(--charcoal);
+}
+
+.testimonial-date {
+  font-size: 0.75rem;
+  color: var(--antique-gold);
+  font-weight: 600;
+}

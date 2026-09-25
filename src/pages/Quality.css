@@ -1,0 +1,178 @@
+.quality-hero {
+  padding: 4.5rem 0;
+}
+
+.quality-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.quality-paragraph {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.cert-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cert-pill {
+  background-color: var(--travertine);
+  border: 1px solid var(--border-light);
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.cert-icon {
+  color: var(--antique-gold);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.cert-pill strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--espresso);
+}
+
+.cert-pill span {
+  font-size: 0.78rem;
+  color: var(--charcoal);
+}
+
+.quality-img-wrap {
+  position: relative;
+  border: 1px solid var(--antique-gold);
+  padding: 0.75rem;
+  background-color: var(--white);
+}
+
+.quality-img-wrap img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.specs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+
+.spec-card {
+  background-color: var(--marble-white);
+  border: 1px solid var(--hairline);
+  padding: 2.2rem 1.6rem;
+  transition: border-color var(--transition-fast);
+}
+
+.spec-card:hover {
+  border-color: var(--antique-gold);
+}
+
+.spec-icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: var(--espresso);
+  color: var(--antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.spec-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+
+.spec-card-desc {
+  font-size: 0.88rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.eco-commit-box {
+  background-color: var(--travertine);
+  border: 1px solid var(--antique-gold);
+  padding: 3rem;
+}
+
+.eco-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.eco-icon {
+  color: var(--antique-gold);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.eco-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+
+.eco-desc {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.5rem;
+}
+
+.eco-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--espresso);
+  font-weight: 600;
+}
+
+.eco-check {
+  color: var(--antique-gold);
+}
+
+@media (max-width: 1024px) {
+  .specs-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .quality-story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .specs-card-grid, .cert-pills, .eco-grid {
+    grid-template-columns: 1fr;
+  }
+}

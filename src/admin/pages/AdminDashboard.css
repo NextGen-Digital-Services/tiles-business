@@ -1,0 +1,115 @@
+.dashboard-header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metric-box {
+  background-color: var(--white);
+  border: 1px solid var(--hairline);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.metric-box:hover {
+  border-color: var(--antique-gold);
+}
+
+.metric-icon-box {
+  width: 54px;
+  height: 54px;
+  background-color: var(--travertine);
+  color: var(--antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-data {
+  flex: 1;
+}
+
+.metric-data .stat-card {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  align-items: flex-start !important;
+  text-align: left;
+}
+
+.metric-data .stat-number {
+  color: var(--espresso) !important;
+  font-size: 2rem !important;
+}
+
+.metric-data .stat-label {
+  color: var(--charcoal) !important;
+  font-size: 0.72rem !important;
+  margin-top: 0.2rem !important;
+}
+
+.metric-sub-badge {
+  display: inline-block;
+  background-color: var(--terracotta);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.dashboard-section-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--espresso);
+}
+
+.view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--antique-gold);
+}
+
+.inq-date {
+  font-size: 0.8rem;
+  color: var(--charcoal);
+}
+
+.inq-email {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--antique-gold);
+}
+
+@media (max-width: 1100px) {
+  .admin-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

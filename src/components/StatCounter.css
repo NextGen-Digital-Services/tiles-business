@@ -1,0 +1,51 @@
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+  background-color: var(--espresso);
+  border: 1px solid rgba(176, 141, 87, 0.25);
+  transition: border-color var(--transition-fast);
+}
+
+.stat-card:hover {
+  border-color: var(--antique-gold);
+}
+
+.stat-icon {
+  color: var(--antique-gold);
+  margin-bottom: 0.8rem;
+}
+
+.stat-number-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--marble-white);
+  line-height: 1;
+}
+
+.stat-suffix {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--antique-gold);
+  font-weight: 300;
+}
+
+.stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C5BCB9;
+  margin-top: 0.6rem;
+}

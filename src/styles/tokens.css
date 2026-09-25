@@ -1,0 +1,27 @@
+:root {
+  /* Color Palette — Solid Flat Colors */
+  --marble-white: #FAF7F2;
+  --travertine: #EDE3D3;
+  --espresso: #231F1B;
+  --charcoal: #3A342E;
+  --antique-gold: #B08D57;
+  --terracotta: #A85C32;
+  --white: #FFFFFF;
+
+  /* Muted / Border colors */
+  --border-light: rgba(176, 141, 87, 0.25);
+  --border-dark: rgba(255, 255, 255, 0.15);
+  --hairline: #E2D9CB;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* Spacing & Layout */
+  --site-max-width: 1280px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}

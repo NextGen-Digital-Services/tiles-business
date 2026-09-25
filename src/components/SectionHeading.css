@@ -1,0 +1,32 @@
+.section-heading {
+  margin-bottom: 3rem;
+  max-width: 780px;
+}
+
+.section-heading.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.heading-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-family: var(--font-serif);
+  color: var(--espresso);
+  line-height: 1.18;
+  margin-bottom: 0.8rem;
+}
+
+.section-heading.dark-text .heading-title {
+  color: var(--marble-white);
+}
+
+.heading-subtitle {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.section-heading.dark-text .heading-subtitle {
+  color: #D6CFCE;
+}

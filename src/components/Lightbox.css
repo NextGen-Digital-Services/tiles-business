@@ -1,0 +1,109 @@
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 18, 16, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--marble-white);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(35, 31, 27, 0.6);
+  border: 1px solid var(--antique-gold);
+  color: var(--marble-white);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color var(--transition-fast);
+}
+
+.lightbox-nav:hover {
+  background-color: var(--antique-gold);
+}
+
+.nav-prev { left: -3.5rem; }
+.nav-next { right: -3.5rem; }
+
+.lightbox-content {
+  background-color: var(--espresso);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-media {
+  max-height: 65vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-media img {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+}
+
+.lightbox-meta {
+  padding: 1.5rem;
+  color: var(--marble-white);
+}
+
+.lightbox-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--marble-white);
+}
+
+.lightbox-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--antique-gold);
+  margin-top: 0.2rem;
+}
+
+.lightbox-desc {
+  font-size: 0.9rem;
+  color: #D6CFCE;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .nav-prev { left: 0.5rem; }
+  .nav-next { right: 0.5rem; }
+  .lightbox-overlay { padding: 1rem; }
+}
